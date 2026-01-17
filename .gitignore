@@ -1,12 +1,14 @@
 # Veri Dosyaları (Güvenlik ve Performans)
 data/
 *.csv
+*.xml
 *.xlsx
 *.json
 !data/README.md  # Veri klasörü yapısını anlatmak istersen bu hariç
 
 # Python & Jupyter
 __pycache__/
+.idea
 *.py[cod]
 .ipynb_checkpoints/
 .venv/
