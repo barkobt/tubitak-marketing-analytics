@@ -8,6 +8,53 @@
 
 ---
 
+## 🇹🇷 Türkçe Özet | Turkish Summary
+
+**TÜBİTAK Pazarlama Analitiği Projesi: Veri Sızıntısından Aksiyon Önericiye**
+
+Bu proje, 48.000 müşteri kaydını kullanarak **uçtan uca bir makine öğrenmesi sistemi** geliştirmektedir. Proje, aşırı dengesiz veri (%1.3 dönüşüm oranı) ile çalışırken **kritik bir veri sızıntısı** (data leakage) tespit etmiş ve bunu sistematik senaryolar (A-F) ile çözerek **dürüst** bir model oluşturmuştur.
+
+### **Temel Başarılar:**
+- ✅ **Veri sızıntısı tespit ve giderildi:** Sahte %100 başarı oranı, gerçekçi %71 ROC-AUC'ye düşürüldü
+- ✅ **5.2 kat performans artışı:** Rastgele tahminden 5.2 kat daha iyi F1-Skoru (0.15)
+- ✅ **Karar destek sistemi:** Müşteri bazlı kanal×platform simülasyonu ile **+%26.5 beklenen dönüşüm artışı**
+- ✅ **Segment-spesifik stratejiler:** Yüksek gelir grubu için %33 ek dönüşüm potansiyeli
+- ✅ **Üretime hazır model:** Eşik optimizasyonu ve çapraz doğrulama ile
+
+### **Teknik Yenilikler:**
+1. **Sistematik Sızıntı Tespiti:** A-F senaryo testleri ile sahte başarı kaynakları belirlendi
+2. **Feature Yeniden İnşası (v2):** Sızıntılı özellikler yerine temiz versiyonlar (ROI_v2, CPA_v2) yaratıldı
+3. **Eşik Optimizasyonu:** Dengesiz veri için 0.12-0.15 optimal karar eşiği bulundu
+4. **Prescriptive Analytics:** Sadece tahmin değil, "ne yapılmalı?" sorusuna cevap veren öneri motoru
+
+### **İş Etkisi:**
+- **+218 ek dönüşüm** optimize edilmiş kanal tahsisi ile
+- **%26.5 iyileştirme** beklenen dönüşüm oranında
+- **Bütçe optimizasyonu** segment-bazlı strateji önerileri ile
+
+### **Proje Aşamaları:**
+1. **Veri Temizliği (01):** 48K kayıt, %5 eksik veri, aykırı değer işleme
+2. **Özellik Mühendisliği (02):** 18 yeni özellik, 5 kategori (ROI, Engagement, Segmentation, Interaction, Channel)
+3. **Kanal Analitiği (03):** 7 kanal, 7 platform, 6 araç karşılaştırması, iş önerileri
+4. **Model Karşılaştırma (04):** Sızıntı tespiti, A-F senaryo testleri, 5 model (LR, RF, GB, XGBoost, LightGBM)
+5. **Öneri Sistemi (05):** What-if simülasyon motoru, 49 senaryo (7 kanal × 7 platform), kişiselleştirilmiş stratejiler
+
+### **Ders Çıkarımlar:**
+- **Veri sızıntısı sinsi:** Mükemmel skorlar (%100 AUC) tehlike işareti
+- **F1=0.15 başarıdır:** %1.3 dengesiz veri için güçlü tahmin gücü
+- **Eşik kritik:** Varsayılan 0.5 kullanışsız, optimizasyon şart
+- **Tahmin → Aksiyon:** İş değeri "ne yapılmalı" sorusundan gelir
+
+**Kurum:** TÜBİTAK  
+**Tarih:** Ocak 2026  
+**Durum:** Üretime hazır model + aksiyon öneri motoru
+
+---
+
+## 🇬🇧 English Version | İngilizce Versiyon
+
+---
+
 ## 🚀 Key Achievements
 
 - ✅ **Detected & eliminated data leakage** that caused false 100% accuracy
@@ -317,26 +364,13 @@ Business value comes from "what to do", not just "what will happen". Simulation-
 
 ## 👥 Contributors
 
-**Project Lead:** [Your Name]  
-**Institution:** TÜBİTAK  
-**Timeline:** January 2026  
+**Ahmet Baran Bozkurt** - Research Associate & Primary Developer  
+**Sadettin Serhat Turan** - Project Lead & Supervisor  
 
----
-
-## 📄 License
-
-[Specify license]
-
----
-
-## 🔗 Links
-
-- **Documentation:** [Link to detailed docs]
-- **Blog Post:** [Link to writeup]
-- **Presentation:** [Link to slides]
+*Institution:* TÜBİTAK  
+*Duration:* January 2026
 
 ---
 
 **Last Updated:** January 30, 2026  
 **Status:** Production-ready model with prescriptive recommendation engine
-
